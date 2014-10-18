@@ -84,7 +84,7 @@ function openInNotification(info) {
 		   imageUrl: result,								// URL of the image
 		   iconUrl: "icon128.png",							// Icon to go with the notification
 		   buttons: [{										// Buttons on the bottom of the notification
-	            title: "Copy To Clipboard"
+	            title: "Copy URL To Clipboard"
 	        }, {
 	            title: "Open In New Tab"
 	        }]
@@ -125,7 +125,7 @@ function searchOmnibox(info) {
        imageUrl: result,								// URL of the image
        iconUrl: "icon128.png",							// Icon to go with the notification
        buttons: [{										// Buttons on the bottom of the notification
-              title: "Copy To Clipboard"
+              title: "Copy URL To Clipboard"
           }, {
               title: "Open In New Tab"
           }]

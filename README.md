@@ -22,7 +22,7 @@ The user then has the choice of opening the GIF in a new tab or copying the URL 
 
 If a user wishes to search for a random GIF based off a particular term, they can do so with the Omnibox.  By typing `oracle` into the Omnibox, the search box will then take the input and search for a random GIF.
 
-![GIF Oracle Omnibox](/screenshots/notifications.png "How to use the Omnibox to search for a GIF")
+![GIF Oracle Omnibox](/screenshots/omnibox.png "How to use the Omnibox to search for a GIF")
 
 The result will then be displayed in a notification as normal.
 
@@ -30,4 +30,4 @@ The result will then be displayed in a notification as normal.
 
 This Chrome Extension was made as part of Carnegie Mellon Heinz College's Internet Technologies class in Mini 1 of the Fall of 2014 with the help of Kevin Chen and Matthew Hsieh.  Logo was provided by Jane Yoon.
 
-![Powered By Giphy](/screenshots/giphyLogo.png "Powered By Giphy")
+![Powered By Giphy](/screenshots/giphyLogo.gif "Powered By Giphy")

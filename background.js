@@ -172,9 +172,10 @@ function toClipboard(theInput) {
 // Create listener to recommend searching for a GIF in the search box
 chrome.omnibox.onInputChanged.addListener(
   function(text, suggest) {
-    suggest([
-      {content: "Oracle " + text, description: "Search for a random GIF of " + text},
-    ]);
+    var suggestions = [];
+    suggestions.push({content: "Oracle " + text, description: "Search for a random GIF of " + text});
+    // Set first suggestion as the default suggestion
+    chrome.omnibox.setDefaultSuggestion({description:suggestions[0].description});
 });
 
 // Search for a GIF if the user chooses to do so in the omnibox

@@ -6,7 +6,7 @@ function searchOracle(info)
 {
  var searchString = info;
  // Replace spaces with plus signs
- var modifiedSearchString = searchString.replace(" ", "+");
+ var modifiedSearchString = searchString.replaceAll(" ", "+");
  // Set API Key for Gifly (Test Key, not a production key)
  var apiKey = "dc6zaTOxFJmzC";
  // Create search URL
@@ -182,6 +182,16 @@ chrome.omnibox.onInputEntered.addListener(
   function(text) {
     searchOmnibox(text);
 });
+
+// Helper function to handle Regular Expressions escape
+RegExp.escape = function(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
+
+// Helper function to handle a replace all for a string
+String.prototype.replaceAll = function(search, replace) {
+    return this.replace(new RegExp(RegExp.escape(search),'g'), replace);
+};
 
 // Adds the functions to the context menu (right click)
 chrome.contextMenus.create({title: "Find Random GIF", contexts:["selection"], onclick: openInNotification});

@@ -20,11 +20,11 @@ function searchOracle(info)
 	    type: "GET",
 	    dataType : "json",
 	    async: false,
-	    success: function(result, textStatus, jqXHR)
+	    success: function(returned, textStatus, jqXHR)
 	    {
 	       // Attempt to get a result URL
 	       try {
-	       		result = result.data.data.image_url;
+	       		result = returned.data.image_url;
 	       // If a URLis ot returned, set null
 	       } catch (Exception) {
 	       		result = null;
@@ -36,7 +36,6 @@ function searchOracle(info)
             result = null;
         }
 	});
-
    return result;
 }
 
